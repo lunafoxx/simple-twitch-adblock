@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Simple Twitch Adblock",
+    "description": "An extension to block Twitch ads. Done the simplest possible way to avoid Twitch countermeasures.",
+    "version": "1.0.0",
+    "action": {
+        "default_icon": {},
+        "default_title": "Simple Twitch Adblock"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.twitch.tv/*"
+            ],
+            "js": [
+                "index.js"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ],
+    "permissions": [],
+    "host_permissions": []
+}

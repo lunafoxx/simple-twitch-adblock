@@ -1,0 +1,51 @@
+/* Thanks to https://range-input-css.netlify.app/ */
+
+/*********** Baseline, reset styles ***********/
+.STA__custom-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 12rem;
+    padding: 5px;
+}
+
+.STA__custom-slider:focus {
+    outline: none;
+}
+
+.STA__custom-slider:focus-visible {
+    outline: 1px solid white;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+.STA__custom-slider::-webkit-slider-runnable-track {
+    background-color: #fff;
+    border-radius: 0.2rem;
+    height: 0.2rem;
+}
+
+.STA__custom-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -10.4px;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/*********** Firefox styles ***********/
+.STA__custom-slider::-moz-range-track {
+    background-color: #fff;
+    border-radius: 0.2rem;
+    height: 0.2rem;
+}
+
+.STA__custom-slider::-moz-range-thumb {
+    background-color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+}
