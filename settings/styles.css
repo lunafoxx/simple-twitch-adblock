@@ -1,0 +1,37 @@
+html,
+body {
+    width: 300px;
+    font-family: sans-serif;
+}
+
+.STA__header {
+    width: 100%;
+}
+
+.STA__header h1 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.STA__field-group {
+    width: 100%;
+    font-size: 13px;
+    padding: 4px 0px;
+}
+
+.STA__field-group input {
+    cursor: pointer;
+}
+
+.STA__field-group label {
+    cursor: pointer;
+}
+
+.STA__hidden {
+    display: none;
+}
+
+.STA__helper-text {
+    font-size: 11px;
+    margin-top: 8px;
+}

@@ -10,32 +10,43 @@ let blocking = false;
 let restoreVolume = null;
 let href = "";
 
-let debugMessages = true;
+let enabled;
+let debugEnabled;
+
+main();
 
 // ==== MAIN LOOP ==== //
-setInterval(function () {
-    if (href !== location.href) {
-        newPage();
-    }
+async function main() {
+    // my brother in christ
+    enabled = (await browser.storage.sync.get("adblock-enabled"))["adblock-enabled"] ?? true;
+    debugEnabled = (await browser.storage.sync.get("debug-enabled"))["debug-enabled"] ?? false;
 
-    if (!mainVideo) {
-        return;
-    }
+    if (!enabled) return;
 
-    adText = document.querySelector("span[data-test-selector=ad-banner-default-text]");
+    setInterval(async function () {
+        if (href !== location.href) {
+            newPage();
+        }
 
-    if (adText && !blocking) {
-        startBlocking();
-    }
+        if (!mainVideo) {
+            return;
+        }
 
-    if (!adText && blocking) {
-        stopBlocking();
-    }
-}, 500);
+        adText = document.querySelector("span[data-test-selector=ad-banner-default-text]");
+
+        if (adText && !blocking) {
+            startBlocking();
+        }
+
+        if (!adText && blocking) {
+            stopBlocking();
+        }
+    }, 500);
+}
 
 // ==== HELPERS ==== //
 function log(msg) {
-    if (debugMessages) {
+    if (debugEnabled) {
         if (typeof msg === "string") {
             console.log(`[Simple Twitch Adblocker] ${msg}`);
         } else {
