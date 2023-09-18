@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
     <div class="STA__header">
         <h1>Simple Twitch Adblocker</h1>
@@ -16,9 +18,14 @@
         <input type="checkbox" id="debug-checkbox" name="debug-checkbox" />
         <label for="debug-checkbox">Enable console debug messages</label>
     </div>
-    <div class="STA__helper-text">
-        The page must be refreshed for changes to take effect.
+    <div id="no-permissions" class="STA__hidden">
+        <hr />
+        <div class="STA__warning-text">
+            Warning: This extension is missing required permissions. It will not function without them.
+        </div>
+        <button id="permissions-button">Click to Allow</button>
     </div>
     <script src="index.js"></script>
 </body>
+
 </html>

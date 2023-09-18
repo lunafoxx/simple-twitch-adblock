@@ -1,6 +1,6 @@
 html,
 body {
-    width: 300px;
+    width: 320px;
     font-family: sans-serif;
 }
 
@@ -9,13 +9,13 @@ body {
 }
 
 .STA__header h1 {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 5px;
 }
 
 .STA__field-group {
     width: 100%;
-    font-size: 13px;
+    font-size: 15px;
     padding: 4px 0px;
 }
 
@@ -31,7 +31,15 @@ body {
     display: none;
 }
 
-.STA__helper-text {
-    font-size: 11px;
+#no-permissions {
     margin-top: 8px;
+}
+
+.STA__warning-text {
+    font-size: 15px;
+    font-style: italic;
+}
+
+#no-permissions button {
+    margin-top: 6px;
 }
