@@ -2,9 +2,15 @@
     "manifest_version": 3,
     "name": "Simple Twitch Adblocker",
     "description": "An extension to block Twitch ads. Done the simplest possible way to avoid Twitch countermeasures. Ads will be automatically muted and the stream will continue playing over them (in lower resolution due to Twitch limitations).",
-    "version": "1.0.0",
+    "version": "1.0.1",
+    "icons": {
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "64": "icons/icon64.png",
+        "128": "icons/icon128.png"
+    },
     "action": {
-        "default_icon": {},
+        "default_icon": "icons/icon32.png",
         "default_title": "Simple Twitch Adblocker",
         "default_popup": "settings/index.html"
     },
