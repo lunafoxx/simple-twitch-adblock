@@ -88,8 +88,8 @@ function startBlocking() {
     blocking = true;
     log("Ads starting...");
 
-    miniVideo = document.querySelector("div[data-test-selector=picture-by-picture-player-container] video");
-    miniVideoContainer = document.querySelector("div[data-test-selector=picture-by-picture-player-background]");
+    miniVideo = document.querySelector(".pbyp-player-instance video");
+    miniVideoContainer = document.querySelector(".picture-by-picture-player");
     muteButton = document.querySelector("button[data-a-target=player-mute-unmute-button]");
     volumeSlider = document.querySelector("input[data-a-target=player-volume-slider]");
 
